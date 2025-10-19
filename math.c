@@ -41,7 +41,7 @@ double sin(double angle){
     return (angle-(power(angle, 3)/fac(3))+(power(angle, 5)/fac(5))-(power(angle, 7)/fac(7))+(power(angle, 9)/fac(9)));
 }
 
-//tan
+//arctan
 double arctan(double p, double b){
     double ratio = p/b;
     return ratio-(power(ratio,3)/3)+(power(ratio,5)/5)-(power(ratio,7)/7)+(power(ratio,9)/9);
