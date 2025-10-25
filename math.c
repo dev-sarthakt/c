@@ -1,4 +1,7 @@
-const double pi =3.14159;
+#ifndef MATH_C
+#define MATH_C
+
+#include "const.c"
 
 //degtorad
 double degtorad(double deg){
@@ -59,3 +62,24 @@ struct Polar pol(double x, double y){
     temp.angle = arctan(y, x);
     return temp;
 }
+
+
+//slope
+struct point{
+    double x, y;
+};
+
+double slope(struct point *p1, struct point *p2){
+    return ((p2->y - p1->y)/(p2->x - p1->x));
+}
+
+//max & min
+double max(double *a, double *b){
+    return (*a >= *b) ? *a : *b;
+}
+
+double min(double *a, double *b){
+    return (*a >= *b) ? *b : *a;
+}
+
+#endif
