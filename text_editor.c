@@ -2,7 +2,7 @@
 #include <string.h>
 
 int main(int argc, char *argv[]){
-    if (argc > 1 && (strcmp(argv[2], "-w") == 0))
+    if (argc > 2 && (strcmp(argv[2], "-w") == 0))
     {
         printf("\nWriting : %s\n", argv[1]);
         FILE *fp = fopen(argv[1], "w");
@@ -21,7 +21,7 @@ int main(int argc, char *argv[]){
             printf("\r   \n");
         }
         fclose(fp);
-    }else if (argc > 1 && (strcmp(argv[2], "-a") == 0))
+    }else if (argc > 2 && (strcmp(argv[2], "-a") == 0))
     {
         int c, i = 0;
         printf("\nAppending : %s\n", argv[1]);
@@ -49,7 +49,7 @@ int main(int argc, char *argv[]){
             printf("\r   \n");
         }
         fclose(fp);
-    }else if (argc > 1 && (strcmp(argv[2], "-r") == 0)) {
+    }else if (argc > 2 && (strcmp(argv[2], "-r") == 0)) {
         printf("\nReading : %s\n", argv[1]);
         FILE *fp = fopen(argv[1], "r");
         int c, i = 0;
